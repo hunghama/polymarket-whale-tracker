@@ -1,5 +1,7 @@
 🐋 Polymarket Whale Tracker (Day 6/180)
 
+🔗 GitHub Repository: https://github.com/hunghama/polymarket-whale-tracker
+
 English below | Tiếng Việt ở dưới
 
 🇺🇸 ENGLISH VERSION
