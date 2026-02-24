@@ -1,87 +1,67 @@
-🐋 Polymarket Whale Tracker (Day 5/180)
+🐋 Polymarket Whale Tracker (Day 6/180)
 
 English below | Tiếng Việt ở dưới
 
 🇺🇸 ENGLISH VERSION
 
-An automated Data Pipeline built with Python to track smart money ("Whales") on the Polymarket prediction market and deliver visual reports directly via Telegram.
+An automated Real-Time Data Pipeline built with Python to track smart money ("Whales") on the Polymarket prediction market. The bot fetches live blockchain data via API, processes nested JSONs, and delivers visual financial newsletters directly via Telegram.
 
-🌟 Core Features
+🌟 Core Features (Day 6 Upgrades)
 
-Data Ingestion: Automatically scans and reads the latest market report datasets.
+Live API Ingestion: Upgraded from static CSVs to fetching real-time data directly from Polymarket's Gamma API.
 
-Data Filtering: Uses Pandas to filter out markets with a trading volume exceeding $10,000,000.
+Deep JSON Parsing: Extracts nested betting odds (outcomePrices) to provide live "Yes/No" token prices.
 
-Data Visualization: Generates professional Bar Charts using Matplotlib to visualize smart money flow.
+Data Cleaning & Error Handling: Automatically coerces messy strings into numeric types and handles missing data gracefully (Zero N/As).
 
-Telegram Integration: Automatically pushes charts and summary text to mobile devices via the Telegram Bot API.
+Smart Time-Filter: Built-in logic to automatically filter out expired/historical markets (e.g., 2020/2021 events), ensuring only active future markets are reported.
 
-Background Automation: Runs 24/7 on Windows as a Background Service, executing scheduled reports every 60 minutes.
+Data Visualization: Generates professional Bar Charts using Matplotlib to visualize the top 10 highest-volume markets.
+
+Automated Newsletter: Pushes formatted Markdown reports (including emojis and bold texts) paired with the generated chart to Telegram 24/7.
 
 🛠️ Tech Stack
 
 Language: Python 3.x
 
-Libraries: pandas, matplotlib, requests, glob, logging
+Libraries: requests, pandas, matplotlib, json, datetime
 
-Environment: Miniconda
-
-OS Execution: Windows VBScript & Batch Script for stealth background running.
-
-🚀 Project Structure
-
-automation_bot.py: Main Bot source code.
-
-chay_bot.bat: Script to activate the Conda environment and trigger the Bot.
-
-giau_cua_so.vbs: VBScript to hide the CMD window for full background execution.
-
-bot_log.txt: System activity log file.
+Architecture: ETL (Extract, Transform, Load) Pipeline.
 
 👨‍💻 Author
 
 Phi Hung (Hùng $\pi^2$)
 
-Developed as part of the: 180-Day Web3 Coding Challenge (Day 5).
+Developed as part of the: 180-Day Web3 Coding Challenge (Day 6).
 
 🇻🇳 PHIÊN BẢN TIẾNG VIỆT
 
-Một hệ thống tự động (Automated Data Pipeline) được xây dựng bằng Python để theo dõi dòng tiền thông minh ("Cá mập") trên thị trường dự đoán Polymarket và gửi báo cáo trực quan qua Telegram.
+Một hệ thống Data Pipeline thời gian thực được xây dựng bằng Python để theo dõi dòng tiền thông minh ("Cá mập") trên Polymarket. Bot tự động lấy dữ liệu trực tiếp qua API, xử lý JSON lồng nhau và gửi bản tin tài chính trực quan qua Telegram.
 
-🌟 Tính năng cốt lõi
+🌟 Tính năng cốt lõi (Bản nâng cấp Day 6)
 
-Data Ingestion: Tự động quét và đọc file dữ liệu báo cáo thị trường mới nhất.
+Live API Ingestion: Nâng cấp từ đọc file CSV tĩnh sang gọi API lấy dữ liệu thời gian thực từ Polymarket.
 
-Data Filtering: Sử dụng Pandas để lọc ra các kèo (markets) có khối lượng giao dịch trên 10 triệu USD.
+Deep JSON Parsing: Bóc tách dữ liệu JSON lồng nhau để lấy ra giá cược Live (Outcome Prices) một cách chính xác.
 
-Data Visualization: Vẽ biểu đồ Bar Chart chuyên nghiệp bằng Matplotlib để hiển thị dòng tiền.
+Data Cleaning: Tự động làm sạch dữ liệu rác, ép kiểu dữ liệu an toàn để hệ thống không bị crash khi API trả về lỗi.
 
-Telegram Integration: Tự động gửi biểu đồ và tóm tắt báo cáo trực tiếp về điện thoại qua Telegram Bot API.
+Smart Time-Filter: Thuật toán lọc thời gian thông minh giúp tự động loại bỏ các kèo "đồ cổ" (đã hết hạn từ 2020/2021), chỉ giữ lại các sự kiện ở tương lai.
 
-Background Automation: Chạy ngầm 24/7 trên Windows như một Background Service, tự động báo cáo mỗi 60 phút.
+Data Visualization: Vẽ biểu đồ Bar Chart chuyên nghiệp bằng Matplotlib hiển thị Top 10 kèo giao dịch lớn nhất.
+
+Automated Newsletter: Gửi bản tin định dạng Markdown (kèm ảnh biểu đồ) tự động về Telegram 24/7.
 
 🛠️ Công nghệ sử dụng
 
 Ngôn ngữ: Python 3.x
 
-Thư viện: pandas, matplotlib, requests, glob, logging
+Thư viện: requests, pandas, matplotlib, json, datetime
 
-Môi trường: Miniconda
-
-Hệ điều hành: Khởi chạy ngầm qua Windows VBScript & Batch Script.
-
-🚀 Cấu trúc dự án
-
-automation_bot.py: Mã nguồn chính của Bot.
-
-chay_bot.bat: Script khởi động môi trường Conda và gọi Bot.
-
-giau_cua_so.vbs: Script ẩn cửa sổ CMD để Bot chạy ngầm hoàn toàn.
-
-bot_log.txt: File ghi lại nhật ký hoạt động của hệ thống.
+Kiến trúc: Quy trình ETL (Trích xuất, Biến đổi, Tải lên).
 
 👨‍💻 Tác giả
 
 Phi Hùng (Hùng $\pi^2$)
 
-Được phát triển trong khuôn khổ: Thử thách 180 Ngày Lập Trình Web3 (Day 5).
+Được phát triển trong khuôn khổ: Thử thách 180 Ngày Lập Trình Web3 (Day 6).
